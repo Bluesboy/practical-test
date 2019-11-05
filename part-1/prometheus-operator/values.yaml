@@ -1,0 +1,31 @@
+alertmanager:
+  enabled: true
+  ingress:
+    enabled: true
+    hosts: [am.deus.pro]
+grafana:
+  enabled: true
+  defaultDashboardsEnabled: true
+  adminPassword: prom-operator
+  ingress:
+    enabled: true
+    hosts: [grafana.deus.pro]
+kubeApiServer:
+  enabled: true
+  tlsConfig:
+    insecureSkipVerify: true
+kubeControllerManager:
+  enabled: false
+coreDns:
+  enabled: false
+kubeEtcd:
+  enabled: false
+kubeScheduler:
+  enabled: false
+kubeProxy:
+  enabled: false
+prometheus:
+  enabled: true
+  ingress:
+    enabled: true
+    hosts: [prometheus.deus.pro]
