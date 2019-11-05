@@ -1,0 +1,2 @@
+openvpn:
+  OVPN_PROTO: udp
