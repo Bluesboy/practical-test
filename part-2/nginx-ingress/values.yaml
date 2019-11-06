@@ -3,7 +3,9 @@ controller:
     enabled: true
   service:
     enabled: true
-    type: ClusterIP
+    type: LoadBalancer
+    annotations:
+      cloud.google.com/load-balancer-type: "Internal"
   metrics:
     enabled: true
     serviceMonitor:
