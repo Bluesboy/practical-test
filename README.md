@@ -1,3 +1,4 @@
+**WARNING** ***make** scenarios are intended to use in separate project without other GKE clusters*
 ### Requirements
 - **gcloud** installed and configured to work with project
 - **kubectl**, **helm**, **make** installed
