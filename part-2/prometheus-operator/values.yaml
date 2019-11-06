@@ -29,3 +29,12 @@ prometheus:
   ingress:
     enabled: true
     hosts: [prometheus.deus.pro]
+  prometheusSpec:
+    storageSpec:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: standard
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 10Gi
