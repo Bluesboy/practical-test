@@ -3,6 +3,8 @@ alertmanager:
   ingress:
     enabled: true
     hosts: [am.deus.pro]
+    annotations:
+      kubernetes.io/ingress.class: nginx-internal
 grafana:
   enabled: true
   defaultDashboardsEnabled: true
@@ -29,6 +31,8 @@ prometheus:
   ingress:
     enabled: true
     hosts: [prometheus.deus.pro]
+    annotations:
+      kubernetes.io/ingress.class: nginx-internal
   prometheusSpec:
     storageSpec:
       volumeClaimTemplate:
