@@ -1,9 +1,12 @@
 controller:
+  ingressClass: nginx-internal
   publishService:
     enabled: true
   service:
     enabled: true
     type: LoadBalancer
+    annotations:
+      cloud.google.com/load-balancer-type: "Internal"
   metrics:
     enabled: true
     serviceMonitor:
